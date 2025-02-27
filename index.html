@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>АзияФуд - Доставка Азиатской Кухни</title>
+    <title>АзияФуд - Доставка Азіатської Кухні</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
         body {
@@ -14,7 +14,6 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            justify-content: center;
             max-width: 800px;
             margin: auto;
         }
@@ -57,81 +56,108 @@
             background-color: #cc0000;
             transform: scale(1.05);
         }
+        .order-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+        .order-form input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .order-form button {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
-    <h1>Сайт учня Logika</h1>
-    <h2>АзияФуд - Доставка Вкуснейших Блюд Азии</h2>
+    <h1>АзияФуд - Доставка Азіатської Кухні</h1>
     
     <div class="swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="sell1.jpeg" alt="Скидка 1"></div>
-            <div class="swiper-slide"><img src="sell2.jpeg" alt="Скидка 2"></div>
-            <div class="swiper-slide"><img src="sell3.jpeg" alt="Скидка 3"></div>
+            <div class="swiper-slide"><img src="sell1.jpeg" alt="Знижка 1"></div>
+            <div class="swiper-slide"><img src="sell2.jpeg" alt="Знижка 2"></div>
+            <div class="swiper-slide"><img src="sell3.jpeg" alt="Знижка 3"></div>
         </div>
         <div class="swiper-pagination"></div>
     </div>
     
     <div class="menu">
         <div class="menu-item">
-            <img src="fulodelvia.jpg" alt="Филадельфия">
-            <h2>Роллы "Филадельфия"</h2>
-            <p>Свежий лосось, сливочный сыр и авокадо</p>
-            <p><strong>Цена: 300 грн</strong></p>
-            <button onclick="openOrderForm('Филадельфия')">Заказать</button>
+            <img src="fulodelvia.jpg" alt="Філадельфія">
+            <h2>Роли "Філадельфія"</h2>
+            <p>Свіжий лосось, сир Філадельфія та авокадо</p>
+            <p><strong>Ціна: 300 грн</strong></p>
+            <button onclick="openOrderForm('Філадельфія')">Замовити</button>
         </div>
         <div class="menu-item">
-            <img src="lapha.jpg" alt="Лапша Вок">
-            <h2>Лапша Вок</h2>
-            <p>Ароматная лапша с овощами и курицей</p>
-            <p><strong>Цена: 200 грн</strong></p>
-            <button onclick="openOrderForm('Лапша Вок')">Заказать</button>
+            <img src="lapha.jpg" alt="Локшина Вок">
+            <h2>Локшина Вок</h2>
+            <p>Ароматна локшина з овочами та куркою</p>
+            <p><strong>Ціна: 200 грн</strong></p>
+            <button onclick="openOrderForm('Локшина Вок')">Замовити</button>
         </div>
         <div class="menu-item">
-            <img src="spais.jpg" alt="Суши Спайси">
-            <h2>Суши "Спайси"</h2>
-            <p>Острые суши с креветкой и соусом спайси</p>
-            <p><strong>Цена: 250 грн</strong></p>
-            <button onclick="openOrderForm('Суши Спайси')">Заказать</button>
+            <img src="spais.jpg" alt="Суші Спайсі">
+            <h2>Суші "Спайсі"</h2>
+            <p>Гострі суші з креветкою та соусом спайсі</p>
+            <p><strong>Ціна: 250 грн</strong></p>
+            <button onclick="openOrderForm('Суші Спайсі')">Замовити</button>
         </div>
         <div class="menu-item">
             <img src="Ramen recept_ Ramen noedel bowl _ Miljuschka.jpg" alt="Рамен">
             <h2>Рамен</h2>
-            <p>Традиционный японский суп с лапшой</p>
-            <p><strong>Цена: 280 грн</strong></p>
-            <button onclick="openOrderForm('Рамен')">Заказать</button>
+            <p>Традиційний японський суп з локшиною</p>
+            <p><strong>Ціна: 280 грн</strong></p>
+            <button onclick="openOrderForm('Рамен')">Замовити</button>
         </div>
         <div class="menu-item">
-            <img src="oxotanaovets _ Instagram, Facebook _ Linktree.jpg" alt="Димсам">
-            <h2>Димсам</h2>
-            <p>Китайские пельмени на пару</p>
-            <p><strong>Цена: 220 грн</strong></p>
-            <button onclick="openOrderForm('Димсам')">Заказать</button>
+            <img src="oxotanaovets _ Instagram, Facebook _ Linktree.jpg" alt="Дімсам">
+            <h2>Дімсам</h2>
+            <p>Китайські пельмені на пару</p>
+            <p><strong>Ціна: 220 грн</strong></p>
+            <button onclick="openOrderForm('Дімсам')">Замовити</button>
         </div>
         <div class="menu-item">
             <img src="tempura.jpg" alt="Темпура">
             <h2>Темпура</h2>
-            <p>Жареные в кляре креветки и овощи</p>
-            <p><strong>Цена: 260 грн</strong></p>
-            <button onclick="openOrderForm('Темпура')">Заказать</button>
+            <p>Смажені в клярі креветки та овочі</p>
+            <p><strong>Ціна: 260 грн</strong></p>
+            <button onclick="openOrderForm('Темпура')">Замовити</button>
         </div>
     </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <div id="orderForm" class="order-form">
+        <h2>Оформлення замовлення</h2>
+        <input type="text" id="customerName" placeholder="Ім'я та прізвище">
+        <input type="text" id="customerPhone" placeholder="Номер телефону">
+        <button onclick="submitOrder()">Підтвердити замовлення</button>
+    </div>
+    
     <script>
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            effect: 'slide',
-        });
+        function openOrderForm(item) {
+            document.getElementById('orderForm').style.display = 'block';
+        }
+        function submitOrder() {
+            let name = document.getElementById('customerName').value;
+            let phone = document.getElementById('customerPhone').value;
+            if (name && phone) {
+                alert(`Дякуємо, ${name}! Ваше замовлення прийнято.`);
+                document.getElementById('orderForm').style.display = 'none';
+            } else {
+                alert("Будь ласка, введіть всі необхідні дані.");
+            }
+        }
     </script>
 </body>
 </html>
-
